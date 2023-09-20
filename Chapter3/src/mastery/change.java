@@ -1,3 +1,13 @@
+/*
+ * program: change.java        Last Date of this Revision: September 20,2023
+ * 
+ * Purpose: An application that allow user to input change,and output the changes in terms of quarters,
+ * dimes,nickels and pennies.
+ * 
+ * Author:Terry Pan
+ * School:CHHS
+ * Course:Computer Science 20
+ */
 package mastery;
 
 import java.util.Scanner;
@@ -24,3 +34,14 @@ public class change {
 	}
 
 }
+
+/*Screen Dump
+ *Enter the change in cents: 
+212
+The minimum number of coins is: 
+Quarters: 8
+Dimes: 1
+Nickels: 0
+Pennies: 2 
+ */
+  
