@@ -29,10 +29,10 @@ public class spending {
 	double budgetrent = (rent / total)*100;
     input.close();
     NumberFormat percent = NumberFormat.getPercentInstance();
-    System.out.println("The Budget of food is" + percent.format(budgetfood));
-    System.out.println("The Budget of clothing is" + percent.format(budgetclothing));
-    System.out.println("The Budget of entertainment is" + percent.format(budgetentertainment));
-    System.out.println("The Budget of rent is" + percent.format(budgetrent));
+    System.out.println("The Budget of food is: " + percent.format(budgetfood));
+    System.out.println("The Budget of clothing is: " + percent.format(budgetclothing));
+    System.out.println("The Budget of entertainment is: " + percent.format(budgetentertainment));
+    System.out.println("The Budget of rent is: " + percent.format(budgetrent));
 
 	}
 
