@@ -1,7 +1,8 @@
 /*
  * program:order.java    Last date of this revision: September 20,2023
  * 
- * Purpose: An application that allow 
+ * Purpose: An order application that prompts the employee for the number of burger,fries,and soda.
+ * Also,display the total,tax,and change.
  * 
  * Author:Terry Pan
  * School:CHHS
@@ -27,7 +28,6 @@ public class order {
 	int num2 = input.nextInt();
 	System.out.println("Enter the number of soda: ");
 	int num3 = input.nextInt();
-	input.close();
 	double total = burgers*num1 + fries*num2 + sodas*num3;
 	NumberFormat money = NumberFormat.getCurrencyInstance();
 	System.out.println("Total before tax: " + money.format(total));
@@ -35,20 +35,30 @@ public class order {
 	System.out.println("Tax: " + money.format(tax));
 	total += tax;
 	System.out.println("Final total: " + money.format(total));
-
+	System.out.println("Enter amount tendered:");
+	double tendered = input.nextDouble();
+	input.close();
+	System.out.println("Enter amount tendered: " + money.format(tendered));
+	double change = tendered - total;
+	System.out.println("Change:" + money.format(change));
+	
 	}
 
 }
 
 /*Screen Dump
- * Enter the number of burger: 
-56
+Enter the number of burger: 
+2
 Enter the number of fries: 
-23
+5
 Enter the number of soda: 
-13
-Total before tax: $132.58
-Tax: $8.62
-Final total: $141.20
+5
+Total before tax: $13.78
+Tax: $0.90
+Final total: $14.68
+Enter amount tendered:
+20
+Enter amount tendered: $20.00
+Change:$5.32
 
  */ 
