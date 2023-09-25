@@ -1,5 +1,12 @@
 /*
+ * program name:spending.java    Last date of this revision:September 25,2023
  * 
+ * Purpose:An application that generate the percent of each session take part in the total cost 
+ * follow by user input.
+ * 
+ * Author:Terry Pan
+ * School:CHHS
+ * Course name:Computer Science 20
  */
 package mastery;
 
@@ -12,21 +19,21 @@ public class spending {
 	int total = 0;
 	System.out.println("Enter the amount spent last month on the following items: ");
 	System.out.println("Food:");
-	int food = input.nextInt();
+	double food = input.nextInt();
 	total += food;
 	System.out.println("Clothing: ");
-	int clothing = input.nextInt();
+	double clothing = input.nextInt();
 	total += clothing;
 	System.out.println("Entertainment: ");
-	int entertainment = input.nextInt();
+	double entertainment = input.nextInt();
 	total += entertainment;
 	System.out.println("Rent:");
-	int rent = input.nextInt();
+	double rent = input.nextInt();
 	total += rent;
-	double budgetfood = (food / total)*100;
-	double budgetclothing = (clothing / total)*100;
-	double budgetentertainment = (entertainment / total)*100;
-	double budgetrent = (rent / total)*100;
+	double budgetfood = food / total;
+	double budgetclothing = clothing / total;
+	double budgetentertainment = entertainment / total;
+	double budgetrent = rent / total;
     input.close();
     NumberFormat percent = NumberFormat.getPercentInstance();
     System.out.println("The Budget of food is: " + percent.format(budgetfood));
@@ -39,7 +46,20 @@ public class spending {
 }
 
 /*Screen Dump
- * 
+ * Enter the amount spent last month on the following items: 
+Food:
+350
+Clothing: 
+300
+Entertainment: 
+200
+Rent:
+1250
+The Budget of food is: 17%
+The Budget of clothing is: 14%
+The Budget of entertainment is: 10%
+The Budget of rent is: 60%
+
  */
 
 
